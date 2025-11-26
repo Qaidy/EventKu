@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buat Event Baru - EventHub</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold fs-4" href="../index.html">
+                <i class="fas fa-calendar-days me-2"></i>EventHub
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="event-list.html">Event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="add-event.html">Buat Event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h1 class="mb-0">Buat Event Baru</h1>
+            <p class="text-muted">Buat dan promosikan event Anda di EventHub</p>
+        </div>
+    </section>
+
+    <!-- Form -->
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow-sm">
+                    <div class="card-body p-5">
+                        <form id="addEventForm">
+                            <div class="mb-4">
+                                <label for="title" class="form-label fw-bold">Judul Event <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="title" placeholder="Masukkan judul event" required>
+                                <small class="text-danger" id="titleError"></small>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="description" class="form-label fw-bold">Deskripsi <span class="text-danger">*</span></label>
+                                <textarea class="form-control" id="description" rows="4" placeholder="Jelaskan detail event Anda" required></textarea>
+                                <small class="text-danger" id="descriptionError"></small>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <label for="date" class="form-label fw-bold">Tanggal Event <span class="text-danger">*</span></label>
+                                    <input type="date" class="form-control" id="date" required>
+                                    <small class="text-danger" id="dateError"></small>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <label for="location" class="form-label fw-bold">Lokasi <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="location" placeholder="Kota atau Venue" required>
+                                    <small class="text-danger" id="locationError"></small>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <label for="price" class="form-label fw-bold">Harga <span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">Rp</span>
+                                        <input type="number" class="form-control" id="price" placeholder="0" min="0" required>
+                                    </div>
+                                    <small class="text-danger" id="priceError"></small>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <label for="category" class="form-label fw-bold">Kategori <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="category" required>
+                                        <option value="">Pilih Kategori</option>
+                                        <option value="Workshop">Workshop</option>
+                                        <option value="Seminar">Seminar</option>
+                                        <option value="Konferensi">Konferensi</option>
+                                        <option value="Meetup">Meetup</option>
+                                        <option value="Festival">Festival</option>
+                                    </select>
+                                    <small class="text-danger" id="categoryError"></small>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="image" class="form-label fw-bold">URL Banner Event</label>
+                                <input type="url" class="form-control" id="image" placeholder="https://example.com/image.jpg">
+                                <small class="text-muted">Biarkan kosong untuk menggunakan placeholder</small>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="organizer" class="form-label fw-bold">Nama Penyelenggara <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="organizer" placeholder="Nama organisasi atau perorangan" required>
+                                <small class="text-danger" id="organizerError"></small>
+                            </div>
+
+                            <div class="d-grid gap-2 d-sm-flex justify-content-sm-end">
+                                <button type="reset" class="btn btn-secondary">Reset</button>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-plus-circle me-2"></i>Buat Event
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2025 EventHub. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/add-event.js"></script>
+</body>
+</html>
