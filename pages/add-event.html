@@ -7,6 +7,8 @@
     <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +16,7 @@
 </head>
 <body style="background: linear-gradient(135deg, #E3F2FD 0%, #F3E5F5 50%, #FFF9E6 100%); background-attachment: fixed;">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg modern-navbar sticky-top">
+    <nav class="navbar navbar-expand-lg modern-navbar sticky-top" data-aos="fade-down" data-aos-duration="800">
         <div class="container-fluid">
             <a class="navbar-brand fw-bold fs-4" href="../index.html">
                 <img src="../img/icon-white.png" class="img-fluid mx-1" style="width: 33px;"></i>EventKu
@@ -24,16 +26,16 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
+                    <li class="nav-item" data-aos="fade-down" data-aos-duration="800" data-aos-delay="100">
                         <a class="nav-link" href="../index.html">Beranda</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">
                         <a class="nav-link" href="event-list.html">Event</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" data-aos="fade-down" data-aos-duration="800" data-aos-delay="300">
                         <a class="nav-link active" href="add-event.html">Buat Event</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" data-aos="fade-down" data-aos-duration="800" data-aos-delay="400">
                         <a class="nav-link" href="dashboard.html">Dashboard</a>
                     </li>
                 </ul>
@@ -44,8 +46,8 @@
     <!-- Page Header -->
     <section class="py-5 bg-light text-center">
         <div class="container">
-            <h1 class="mb-0">Buat Event Baru</h1>
-            <p class="text-muted">Buat dan promosikan event Anda di EventKu</p>
+            <h1 class="mb-0" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-cubic">Buat Event Baru</h1>
+            <p class="text-muted" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" data-aos-easing="ease-out-cubic">Buat dan promosikan event Anda di EventKu</p>
         </div>
     </section>
 
@@ -53,28 +55,28 @@
     <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-lg-8">
-                <div class="card shadow-sm">
+                <div class="card shadow-sm" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
                     <div class="card-body p-5">
                         <form id="addEventForm">
-                            <div class="mb-4">
+                            <div class="mb-4" data-aos="fade-right" data-aos-duration="800" data-aos-delay="400">
                                 <label for="title" class="form-label fw-bold">Judul Event <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" id="title" placeholder="Masukkan judul event" required>
                                 <small class="text-danger" id="titleError"></small>
                             </div>
 
-                            <div class="mb-4">
+                            <div class="mb-4" data-aos="fade-left" data-aos-duration="800" data-aos-delay="500">
                                 <label for="description" class="form-label fw-bold">Deskripsi <span class="text-danger">*</span></label>
                                 <textarea class="form-control" id="description" rows="4" placeholder="Jelaskan detail event Anda" required></textarea>
                                 <small class="text-danger" id="descriptionError"></small>
                             </div>
 
                             <div class="row">
-                                <div class="col-md-6 mb-4">
+                                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
                                     <label for="date" class="form-label fw-bold">Tanggal Event <span class="text-danger">*</span></label>
                                     <input type="date" class="form-control" id="date" required>
                                     <small class="text-danger" id="dateError"></small>
                                 </div>
-                                <div class="col-md-6 mb-4">
+                                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
                                     <label for="location" class="form-label fw-bold">Lokasi <span class="text-danger">*</span></label>
                                     <input type="text" class="form-control" id="location" placeholder="Kota atau Venue" required>
                                     <small class="text-danger" id="locationError"></small>
@@ -82,7 +84,7 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-md-6 mb-4">
+                                <div class="col-md-6 mb-4" data-aos="fade-down" data-aos-duration="800" data-aos-delay="800">
                                     <label for="price" class="form-label fw-bold">Harga <span class="text-danger">*</span></label>
                                     <div class="input-group">
                                         <span class="input-group-text">Rp</span>
@@ -90,7 +92,7 @@
                                     </div>
                                     <small class="text-danger" id="priceError"></small>
                                 </div>
-                                <div class="col-md-6 mb-4">
+                                <div class="col-md-6 mb-4" data-aos="fade-down" data-aos-duration="800" data-aos-delay="900">
                                     <label for="category" class="form-label fw-bold">Kategori <span class="text-danger">*</span></label>
                                     <select class="form-select" id="category" required>
                                         <option value="">Pilih Kategori</option>
@@ -104,21 +106,21 @@
                                 </div>
                             </div>
 
-                            <div class="mb-4">
+                            <div class="mb-4" data-aos="flip-up" data-aos-duration="800" data-aos-delay="1000">
                                 <label for="image" class="form-label fw-bold">URL Banner Event</label>
                                 <input type="url" class="form-control" id="image" placeholder="https://example.com/image.jpg">
                                 <small class="text-muted">Biarkan kosong untuk menggunakan placeholder</small>
                             </div>
 
-                            <div class="mb-4">
+                            <div class="mb-4" data-aos="flip-down" data-aos-duration="800" data-aos-delay="1100">
                                 <label for="organizer" class="form-label fw-bold">Nama Penyelenggara <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" id="organizer" placeholder="Nama organisasi atau perorangan" required>
                                 <small class="text-danger" id="organizerError"></small>
                             </div>
 
-                            <div class="d-grid gap-2 d-sm-flex justify-content-sm-end">
-                                <button type="reset" class="btn btn-secondary">Reset</button>
-                                <button type="submit" class="btn btn-primary">
+                            <div class="d-grid gap-2 d-sm-flex justify-content-sm-end" data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="1200">
+                                <button type="reset" class="btn btn-secondary" data-aos="fade-right" data-aos-duration="600" data-aos-delay="1300">Reset</button>
+                                <button type="submit" class="btn btn-primary" data-aos="fade-left" data-aos-duration="600" data-aos-delay="1300">
                                     <i class="fas fa-plus-circle me-2"></i>Buat Event
                                 </button>
                             </div>
@@ -130,14 +132,28 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4 mt-5">
+    <footer class="bg-dark text-white py-4">
         <div class="container text-center">
             <p class="mb-0">&copy; 2025 EventKu. Semua hak dilindungi.</p>
         </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="../js/storage.js"></script>
     <script src="../js/add-event.js"></script>
+    
+    <!-- Initialize AOS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: false
+            });
+        });
+    </script>
 </body>
 </html>

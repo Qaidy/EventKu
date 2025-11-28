@@ -7,6 +7,8 @@
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +16,7 @@
 </head>
 <body style="background: linear-gradient(135deg, #E3F2FD 0%, #F3E5F5 50%, #FFF9E6 100%); background-attachment: fixed;">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg modern-navbar sticky-top">
+    <nav class="navbar navbar-expand-lg modern-navbar sticky-top" data-aos="fade-down" data-aos-duration="800">
         <div class="container-fluid">
             <a class="navbar-brand fw-bold fs-4" href="index.html">
                 <img src="img/icon-white.png" class="img-fluid mx-1" style="width: 33px;"></i>EventKu
@@ -45,13 +47,13 @@
     <section class="hero-section">
         <div class="container h-100 d-flex align-items-center">
             <div class="row w-100 align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="display-4 fw-bold mb-4">Temukan Event Terbaik</h1>
-                    <p class="lead mb-4">Cari, temukan, dan daftar di ribuan event menarik di sekitarmu</p>
-                    <a href="pages/event-list.html" class="btn btn-primary btn-lg">Jelajahi Event</a>
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                    <h1 class="display-4 fw-bold mb-4" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">Temukan Event Terbaik</h1>
+                    <p class="lead mb-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">Cari, temukan, dan daftar di ribuan event menarik di sekitarmu</p>
+                    <a href="pages/event-list.html" class="btn btn-primary btn-lg" data-aos="flip-up" data-aos-duration="800" data-aos-delay="800">Jelajahi Event</a>
                 </div>
-                <div class="col-lg-6 text-center">
-                    <img src="img/undraw_launch-event_aur1.svg" alt="Hero Illustration" class="img-fluid">
+                <div class="col-lg-6 text-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+                    <img src="img/undraw_launch-event_aur1.svg" alt="Hero Illustration" class="img-fluid" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="600">
                 </div>
             </div>
         </div>
@@ -60,11 +62,11 @@
     <!-- Latest Events Section -->
     <section class="py-5">
         <div class="container">
-            <h2 class="section-title mb-5">Event Terbaru</h2>
-            <div class="row" id="latestEventsContainer">
+            <h2 class="section-title mb-5" data-aos="fade-up" data-aos-duration="800">Event Terbaru</h2>
+            <div class="row" id="latestEventsContainer" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <!-- Events akan ditampilkan di sini -->
             </div>
-            <div class="text-center mt-4">
+            <div class="text-center mt-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                 <a href="pages/event-list.html" class="btn btn-outline-primary">Lihat Semua Event</a>
             </div>
         </div>
@@ -73,27 +75,27 @@
     <!-- Features Section -->
     <section class="py-5 bg-light">
         <div class="container">
-            <h2 class="section-title mb-5">Mengapa EventKu?</h2>
+            <h2 class="section-title mb-5" data-aos="fade-up" data-aos-duration="800">Mengapa EventKu?</h2>
             <div class="row g-4">
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="flip-left" data-aos-duration="800" data-aos-delay="200">
                     <div class="feature-card text-center">
-                        <i class="fas fa-search fa-3x text-primary mb-3"></i>
-                        <h5>Cari Mudah</h5>
-                        <p>Temukan event sesuai kategori, lokasi, dan tanggal</p>
+                        <i class="fas fa-search fa-3x text-primary mb-3" data-aos="bounce-in" data-aos-duration="800" data-aos-delay="400"></i>
+                        <h5 data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">Cari Mudah</h5>
+                        <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">Temukan event sesuai kategori, lokasi, dan tanggal</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="flip-left" data-aos-duration="800" data-aos-delay="400">
                     <div class="feature-card text-center">
-                        <i class="fas fa-calendar-check fa-3x text-primary mb-3"></i>
-                        <h5>Daftar Cepat</h5>
-                        <p>Pendaftaran mudah hanya dalam beberapa klik saja</p>
+                        <i class="fas fa-calendar-check fa-3x text-primary mb-3" data-aos="bounce-in" data-aos-duration="800" data-aos-delay="600"></i>
+                        <h5 data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">Daftar Cepat</h5>
+                        <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">Pendaftaran mudah hanya dalam beberapa klik saja</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="flip-left" data-aos-duration="800" data-aos-delay="600">
                     <div class="feature-card text-center">
-                        <i class="fas fa-star fa-3x text-primary mb-3"></i>
-                        <h5>Event Berkualitas</h5>
-                        <p>Semua event telah diverifikasi untuk kualitas terbaik</p>
+                        <i class="fas fa-star fa-3x text-primary mb-3" data-aos="bounce-in" data-aos-duration="800" data-aos-delay="800"></i>
+                        <h5 data-aos="fade-up" data-aos-duration="600" data-aos-delay="700">Event Berkualitas</h5>
+                        <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="800">Semua event telah diverifikasi untuk kualitas terbaik</p>
                     </div>
                 </div>
             </div>
@@ -102,8 +104,8 @@
 
     <section class="py-5 text-center">
         <div class="container">
-            <h2 class="mb-4">Siap Untuk Membuat Acara Anda?</h2>
-            <a href="pages/add-event.html" class="btn btn-primary btn-lg">Buat event sekarang!</a>
+            <h2 class="mb-4" data-aos="fade-up" data-aos-duration="800">Siap Untuk Membuat Acara Anda?</h2>
+            <a href="pages/add-event.html" class="btn btn-primary btn-lg" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">Buat event sekarang!</a>
         </div>
     </section>
 
@@ -115,7 +117,21 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="js/storage.js"></script>
     <script src="js/home.js"></script>
+    
+    <!-- Initialize AOS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: false
+            });
+        });
+    </script>
 </body>
 </html>
