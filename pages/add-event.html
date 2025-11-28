@@ -15,7 +15,7 @@
 </head>
 <body style="background: linear-gradient(135deg, #E3F2FD 0%, #F3E5F5 50%, #FFF9E6 100%); background-attachment: fixed;">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg modern-navbar sticky-top">
+    <nav class="navbar navbar-expand-lg modern-navbar sticky-top" data-aos="fade-down">
         <div class="container-fluid">
             <a class="navbar-brand fw-bold fs-4" href="../index.html">
                 <img src="../img/icon-white.png" class="img-fluid mx-1" style="width: 33px;"></i>EventKu
@@ -43,7 +43,7 @@
     </nav>
 
     <!-- Page Header -->
-    <section class="py-5 bg-light text-center">
+    <section class="py-5 bg-light text-center" data-aos="fade-up">
         <div class="container">
             <h1 class="mb-0">Buat Event Baru</h1>
             <p class="text-muted">Buat dan promosikan event Anda di EventKu</p>
@@ -54,23 +54,23 @@
     <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-lg-8">
-                <div class="card shadow-sm">
+                <div class="card shadow-sm" data-aos="zoom-in">
                     <div class="card-body p-5">
                         <form id="addEventForm">
-                            <div class="mb-4">
+                            <div class="mb-4" data-aos="fade-up" data-aos-delay="100">
                                 <label for="title" class="form-label fw-bold">Judul Event <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" id="title" placeholder="Masukkan judul event" required>
                                 <small class="text-danger" id="titleError"></small>
                             </div>
 
-                            <div class="mb-4">
+                            <div class="mb-4"  data-aos="fade-up" data-aos-delay="150">
                                 <label for="description" class="form-label fw-bold">Deskripsi <span class="text-danger">*</span></label>
                                 <textarea class="form-control" id="description" rows="4" placeholder="Jelaskan detail event Anda" required></textarea>
                                 <small class="text-danger" id="descriptionError"></small>
                             </div>
 
                             <div class="row">
-                                <div class="col-md-6 mb-4">
+                                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
                                     <label for="date" class="form-label fw-bold">Tanggal Event <span class="text-danger">*</span></label>
                                     <input type="date" class="form-control" id="date" required>
                                     <small class="text-danger" id="dateError"></small>
@@ -83,7 +83,7 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-md-6 mb-4">
+                                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
                                     <label for="price" class="form-label fw-bold">Harga <span class="text-danger">*</span></label>
                                     <div class="input-group">
                                         <span class="input-group-text">Rp</span>
@@ -91,7 +91,7 @@
                                     </div>
                                     <small class="text-danger" id="priceError"></small>
                                 </div>
-                                <div class="col-md-6 mb-4">
+                                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="350">
                                     <label for="category" class="form-label fw-bold">Kategori <span class="text-danger">*</span></label>
                                     <select class="form-select" id="category" required>
                                         <option value="">Pilih Kategori</option>
@@ -105,19 +105,19 @@
                                 </div>
                             </div>
 
-                            <div class="mb-4">
+                            <div class="mb-4" data-aos="fade-up" data-aos-delay="400">
                                 <label for="image" class="form-label fw-bold">URL Banner Event</label>
                                 <input type="url" class="form-control" id="image" placeholder="https://example.com/image.jpg">
                                 <small class="text-muted">Biarkan kosong untuk menggunakan placeholder</small>
                             </div>
 
-                            <div class="mb-4">
+                            <div class="mb-4" data-aos="fade-up" data-aos-delay="450">
                                 <label for="organizer" class="form-label fw-bold">Nama Penyelenggara <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" id="organizer" placeholder="Nama organisasi atau perorangan" required>
                                 <small class="text-danger" id="organizerError"></small>
                             </div>
 
-                            <div class="d-grid gap-2 d-sm-flex justify-content-sm-end">
+                            <div class="d-grid gap-2 d-sm-flex justify-content-sm-end" data-aos="fade-up" data-aos-delay="500">
                                 <button type="reset" class="btn btn-secondary">Reset</button>
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fas fa-plus-circle me-2"></i>Buat Event
@@ -131,7 +131,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4 mt-5">
+    <footer class="bg-dark text-white py-4 mt-5" data-aos="fade-up">
         <div class="container text-center">
             <p class="mb-0">&copy; 2025 EventKu. Semua hak dilindungi.</p>
         </div>

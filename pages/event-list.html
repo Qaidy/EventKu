@@ -15,9 +15,9 @@
 </head>
 <body style="background: linear-gradient(135deg, #E3F2FD 0%, #F3E5F5 50%, #FFF9E6 100%); background-attachment: fixed;">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg modern-navbar sticky-top">
+    <nav class="navbar navbar-expand-lg modern-navbar sticky-top" data-aos="fade-down">
         <div class="container-fluid">
-            <a class="navbar-brand fw-bold fs-4" href="../index.html">
+            <a class="navbar-brand fw-bold fs-4" href="../index.html" data-aos="fade-right" data-aos-delay="100">
                 <img src="../img/icon-white.png" class="img-fluid mx-1" style="width: 33px;"></i>EventKu
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -25,16 +25,16 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
+                    <li class="nav-item" data-aos="fade-left" data-aos-delay="100">
                         <a class="nav-link" href="../index.html">Beranda</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" data-aos="fade-left" data-aos-delay="150">
                         <a class="nav-link active" href="event-list.html">Event</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" data-aos="fade-left" data-aos-delay="200">
                         <a class="nav-link" href="add-event.html">Buat Event</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" data-aos="fade-left" data-aos-delay="250">
                         <a class="nav-link" href="dashboard.html">Dashboard</a>
                     </li>
                 </ul>
@@ -43,10 +43,10 @@
     </nav>
 
     <!-- Page Header -->
-    <section class="py-5 bg-light text-center">
+    <section class="py-5 bg-light text-center" data-aos="fade-up">
         <div class="container">
-            <h1 class="mb-0">Daftar Event</h1>
-            <p class="text-muted">Temukan event yang sempurna untuk Anda</p>
+            <h1 class="mb-0" data-aos="zoom-in" data-aos-delay="200">Daftar Event</h1>
+            <p class="text-muted" data-aos="fade-up" data-aos-delay="300">Temukan event yang sempurna untuk Anda</p>
         </div>
     </section>
 
@@ -55,18 +55,18 @@
         <div class="row">
             <!-- Sidebar - Filters -->
             <div class="col-lg-3 mb-4">
-                <div class="card shadow-sm">
+                <div class="card shadow-sm" data-aos="fade-right" data-aos-delay="200">
                     <div class="card-body">
-                        <h5 class="card-title mb-4">Filter</h5>
+                        <h5 class="card-title mb-4" data-aos="fade-up" data-aos-delay="250">Filter</h5>
                         
                         <!-- Search -->
-                        <div class="mb-4">
+                        <div class="mb-4" data-aos="fade-up" data-aos-delay="300">
                             <label class="form-label">Cari Event</label>
                             <input type="text" class="form-control" id="searchInput" placeholder="Nama event...">
                         </div>
 
                         <!-- Category Filter -->
-                        <div class="mb-4">
+                        <div class="mb-4" data-aos="fade-up" data-aos-delay="350">
                             <label class="form-label">Kategori</label>
                             <select class="form-select" id="categoryFilter">
                                 <option value="">Semua Kategori</option>
@@ -79,7 +79,7 @@
                         </div>
 
                         <!-- Sort -->
-                        <div class="mb-4">
+                        <div class="mb-4" data-aos="fade-up" data-aos-delay="400">
                             <label class="form-label">Urutkan</label>
                             <select class="form-select" id="sortFilter">
                                 <option value="date-asc">Tanggal (Terdekat)</option>
@@ -89,7 +89,7 @@
                             </select>
                         </div>
 
-                        <button class="btn btn-outline-primary w-100" id="resetFilters">Reset Filter</button>
+                        <button class="btn btn-outline-primary w-100" id="resetFilters" data-aos="zoom-in" data-aos-delay="450">Reset Filter</button>
                     </div>
                 </div>
             </div>
@@ -99,7 +99,7 @@
                 <div id="eventsContainer" class="row g-4">
                     <!-- Events akan ditampilkan di sini -->
                 </div>
-                <div id="emptyMessage" class="alert alert-info text-center" style="display: none;">
+                <div id="emptyMessage" class="alert alert-info text-center" style="display: none;" data-aos="fade-up">
                     <i class="fas fa-info-circle me-2"></i>Tidak ada event yang ditemukan
                 </div>
             </div>
@@ -107,7 +107,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
+    <footer class="bg-dark text-white py-4"  data-aos="fade-up">
         <div class="container text-center">
             <p class="mb-0">&copy; 2025 EventKu. Semua hak dilindungi.</p>
         </div>
