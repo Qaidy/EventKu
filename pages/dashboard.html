@@ -10,14 +10,16 @@
     <!-- AOS CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body style="background: linear-gradient(135deg, #E3F2FD 0%, #F3E5F5 50%, #FFF9E6 100%); background-attachment: fixed;">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg modern-navbar sticky-top" data-aos="fade-down" data-aos-duration="800">
         <div class="container-fluid">
             <a class="navbar-brand fw-bold fs-4" href="../index.html">
-                <img src="../img/icon-white.png" class="img-fluid mx-1" style="width: 33px;"></i>EventKu
+                <img src="../img/logo ek.png" class="img-fluid mx-1" style="width: 33px;">EventKu
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -34,7 +36,7 @@
                         <a class="nav-link" href="add-event.html">Buat Event</a>
                     </li>
                     <li class="nav-item" data-aos="fade-down" data-aos-duration="800" data-aos-delay="400">
-                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                        <a class="nav-link active" href="dashboard.html">Dashboard</a>
                     </li>
                 </ul>
             </div>
@@ -51,15 +53,6 @@
 
     <!-- Dashboard Content -->
     <div class="container py-5">
-        <!-- Tabs -->
-        <ul class="nav nav-tabs mb-4" role="tablist" data-aos="fade-up" data-aos-duration="800">
-            <li class="nav-item" role="presentation" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="300">
-                <button class="nav-link active" id="my-events-tab" data-bs-toggle="tab" data-bs-target="#myEvents" type="button" role="tab">
-                    <i class="fas fa-calendar-plus me-2"></i>Event Saya
-                </button>
-            </li>
-        </ul>
-
         <!-- Tab Content -->
         <div class="tab-content">
             <!-- My Events Tab -->
@@ -70,16 +63,6 @@
                 <div id="myEventsEmpty" class="alert alert-info text-center" style="display: none;" data-aos="fade-up" data-aos-duration="800">
                     <i class="fas fa-info-circle me-2"></i>Anda belum membuat event. 
                     <a href="add-event.html" class="alert-link">Buat event sekarang</a>
-                </div>
-            </div>
-
-            <!-- Favorites Tab -->
-            <div class="tab-pane fade" id="favorites" role="tabpanel">
-                <div id="favoritesContainer" class="row g-4" data-aos="fade-up" data-aos-duration="1000">
-                    <!-- Favorite events akan ditampilkan di sini -->
-                </div>
-                <div id="favoritesEmpty" class="alert alert-info text-center" style="display: none;" data-aos="fade-up" data-aos-duration="800">
-                    <i class="fas fa-info-circle me-2"></i>Anda belum menambahkan event favorit
                 </div>
             </div>
         </div>
