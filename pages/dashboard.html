@@ -8,11 +8,12 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     
 </head>
 <body style="background: linear-gradient(135deg, #E3F2FD 0%, #F3E5F5 50%, #FFF9E6 100%); background-attachment: fixed;">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg modern-navbar sticky-top">
+    <nav class="navbar navbar-expand-lg modern-navbar sticky-top"  data-aos="fade-down">
         <div class="container-fluid">
             <a class="navbar-brand fw-bold fs-4" href="../index.html">
                 <img src="../img/icon-white.png" class="img-fluid mx-1" style="width: 33px;"></i>EventKu
@@ -40,7 +41,7 @@
     </nav>
 
     <!-- Page Header -->
-    <section class="py-5 bg-light text-center">
+    <section class="py-5 bg-light text-center" data-aos="fade-up">
         <div class="container">
             <h1 class="mb-0">Dashboard</h1>
             <p class="text-muted">Kelola event Anda di sini</p>
@@ -50,7 +51,7 @@
     <!-- Dashboard Content -->
     <div class="container py-5">
         <!-- Tabs -->
-        <ul class="nav nav-tabs mb-4" role="tablist">
+        <ul class="nav nav-tabs mb-4" role="tablist" data-aos="fade-up">
             <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="my-events-tab" data-bs-toggle="tab" data-bs-target="#myEvents" type="button" role="tab">
                     <i class="fas fa-calendar-plus me-2"></i>Event Saya
@@ -66,7 +67,7 @@
                 <div id="myEventsContainer" class="row g-4">
                     <!-- User's events akan ditampilkan di sini -->
                 </div>
-                <div id="myEventsEmpty" class="alert alert-info text-center" style="display: none;">
+                <div id="myEventsEmpty" class="alert alert-info text-center" style="display: none;" data-aos="fade-up">
                     <i class="fas fa-info-circle me-2"></i>Anda belum membuat event. 
                     <a href="add-event.html" class="alert-link">Buat event sekarang</a>
                 </div>
@@ -85,7 +86,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4 mt-5">
+    <footer class="bg-dark text-white py-4 mt-5" data-aos="fade-up">
         <div class="container text-center">
             <p class="mb-0">&copy; 2025 EventKu. Semua hak dilindungi.</p>
         </div>
@@ -151,5 +152,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="../js/storage.js"></script>
     <script src="../js/dashboard.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    // Initialize AOS
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+    });
+</script>
 </body>
 </html>

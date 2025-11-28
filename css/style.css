@@ -195,9 +195,10 @@ h1, h2, h3, h4, h5, h6 {
    =================================== */
 .hero-section {
   background: linear-gradient(135deg, 
-              rgba(0, 122, 255, 0.9) 0%, 
-              rgba(88, 86, 214, 0.9) 100%);
-  backdrop-filter: blur(20px);
+              rgba(62, 59, 203, 0.9) 0%, 
+              rgba(255, 255, 255, 0.6) 100%)
+              rgba(62, 59, 203, 0.9);
+  backdrop-filter: var(--blur-light);
   -webkit-backdrop-filter: blur(20px);
   color: white;
   min-height: 500px;
@@ -207,6 +208,17 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   overflow: hidden;
 }
+
+/* template glass 
+background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: var(--blur-light);
+  -webkit-backdrop-filter: var(--blur-light);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06),
+              inset 0 -1px 0 rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.8rem 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+*/
 
 .hero-section::before {
   content: '';

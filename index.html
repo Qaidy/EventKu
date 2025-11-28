@@ -11,10 +11,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 </head>
 <body style="background: linear-gradient(135deg, #E3F2FD 0%, #F3E5F5 50%, #FFF9E6 100%); background-attachment: fixed;">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg modern-navbar sticky-top">
+    <nav class="navbar navbar-expand-lg modern-navbar sticky-top" data-aos="fade-down">
         <div class="container-fluid">
             <a class="navbar-brand fw-bold fs-4" href="index.html">
                 <img src="img/icon-white.png" class="img-fluid mx-1" style="width: 33px;"></i>EventKu
@@ -48,9 +49,9 @@
                 <div class="col-lg-6">
                     <h1 class="display-4 fw-bold mb-4">Temukan Event Terbaik</h1>
                     <p class="lead mb-4">Cari, temukan, dan daftar di ribuan event menarik di sekitarmu</p>
-                    <a href="pages/event-list.html" class="btn btn-primary btn-lg">Jelajahi Event</a>
+                    <a href="pages/event-list.html" class="btn btn-primary btn-lg" data-aos="zoom-in" data-aos-delay="300">Jelajahi Event</a>
                 </div>
-                <div class="col-lg-6 text-center">
+                <div class="col-lg-6 text-center" data-aos="fade-left" data-aos-delay="200">
                     <img src="img/undraw_launch-event_aur1.svg" alt="Hero Illustration" class="img-fluid">
                 </div>
             </div>
@@ -60,11 +61,11 @@
     <!-- Latest Events Section -->
     <section class="py-5">
         <div class="container">
-            <h2 class="section-title mb-5">Event Terbaru</h2>
+            <h2 class="section-title mb-5" data-aos="fade-up">Event Terbaru</h2>
             <div class="row" id="latestEventsContainer">
                 <!-- Events akan ditampilkan di sini -->
             </div>
-            <div class="text-center mt-4">
+            <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="200">
                 <a href="pages/event-list.html" class="btn btn-outline-primary">Lihat Semua Event</a>
             </div>
         </div>
@@ -75,21 +76,21 @@
         <div class="container">
             <h2 class="section-title mb-5">Mengapa EventKu?</h2>
             <div class="row g-4">
-                <div class="col-md-4">
+                <div class="col-md-4"  data-aos="fade-up" data-aos-delay="100">
                     <div class="feature-card text-center">
                         <i class="fas fa-search fa-3x text-primary mb-3"></i>
                         <h5>Cari Mudah</h5>
                         <p>Temukan event sesuai kategori, lokasi, dan tanggal</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="feature-card text-center">
                         <i class="fas fa-calendar-check fa-3x text-primary mb-3"></i>
                         <h5>Daftar Cepat</h5>
                         <p>Pendaftaran mudah hanya dalam beberapa klik saja</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="feature-card text-center">
                         <i class="fas fa-star fa-3x text-primary mb-3"></i>
                         <h5>Event Berkualitas</h5>
@@ -108,7 +109,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
+    <footer class="bg-dark text-white py-4" data-aos="fade-up">
         <div class="container text-center">
             <p class="mb-0">&copy; 2025 EventKu. Semua hak dilindungi.</p>
         </div>
@@ -117,5 +118,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="js/storage.js"></script>
     <script src="js/home.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    // Initialize AOS
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+    });
+</script>
 </body>
 </html>
