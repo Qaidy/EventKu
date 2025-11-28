@@ -81,6 +81,7 @@ function setRegisteredState(button) {
   button.disabled = true;
   button.classList.remove('btn-primary');
   button.classList.add('btn-success');
+  button.style.color = 'white'; // ← TAMBAH INI
 }
 
 function showNotification(message, type = 'success') {

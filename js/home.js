@@ -37,7 +37,6 @@ function createEventCard(event) {
         <img src="${event.image}" class="card-img-top" alt="${event.title}" style="height: 200px; object-fit: cover;">
         <div class="card-body event-card-body">
           <span class="badge bg-primary mb-2">${event.category}</span>
-          ${isRegistered ? '<span class="badge bg-success mb-2 ms-1">Terdaftar</span>' : ''}
           <h5 class="card-title">${event.title}</h5>
           <p class="card-text text-muted small">${truncateText(event.description, 100)}</p>
           <div class="mb-2">
@@ -51,7 +50,7 @@ function createEventCard(event) {
             </small>
           </div>
           <div class="mt-3">
-            <strong class="text-primary">${formattedPrice}</strong>
+            <strong class="text-purple">${formattedPrice}</strong>
           </div>
         </div>
         <div class="card-footer bg-white border-0 event-card-footer">

@@ -61,80 +61,55 @@ function loadEvents() {
   
   emptyMessage.style.display = 'none';
   
-  // Clear container dan buat cards dengan AOS
+  // Clear container dan buat cards
   container.innerHTML = '';
   events.forEach((event, index) => {
-    const eventCard = createEventCard(event, index);
+    const eventCard = createEventCard(event);
     container.appendChild(eventCard);
   });
-  
-  // Refresh AOS setelah events dimuat
-  setTimeout(() => {
-    if (typeof AOS !== 'undefined') {
-      AOS.refresh();
-    }
-  }, 100);
 }
 
-function createEventCard(event, index) {
+function createEventCard(event) {
   const formattedDate = formatDate(event.date);
   const formattedPrice = formatPrice(event.price);
-  const isFavorite = EventStorage.isFavorite(event.id);
   const isRegistered = EventStorage.isRegistered(event.id);
   
   const col = document.createElement('div');
   col.className = 'col-md-6 col-lg-4';
   
-  // Tambahkan AOS attribute dengan delay bertahap
-  col.setAttribute('data-aos', 'fade-up');
-  col.setAttribute('data-aos-delay', (index % 6) * 100); // Max delay 500ms
-  col.setAttribute('data-aos-duration', '600');
-  
   col.innerHTML = `
     <div class="card event-card shadow-sm h-100">
       <div class="position-relative">
         <img src="${event.image}" class="card-img-top" alt="${event.title}" style="height: 200px; object-fit: cover;">
-        <button 
-          onclick="toggleFavorite(${event.id})" 
-          class="btn btn-sm position-absolute top-0 end-0 m-2 ${isFavorite ? 'btn-danger' : 'btn-light'}"
-          style="border-radius: 50%; width: 40px; height: 40px;"
-          data-aos="zoom-in" data-aos-delay="${(index % 6) * 100 + 200}">
-          <i class="fas fa-heart"></i>
-        </button>
       </div>
       <div class="card-body event-card-body">
-        <div data-aos="fade-up" data-aos-delay="${(index % 6) * 100 + 100}">
+        <div>
           <span class="badge bg-primary mb-2">${event.category}</span>
-          ${isRegistered ? '<span class="badge bg-success mb-2 ms-1">Terdaftar</span>' : ''}
         </div>
-        <h5 class="card-title" data-aos="fade-up" data-aos-delay="${(index % 6) * 100 + 150}">${event.title}</h5>
-        <p class="card-text text-muted small" data-aos="fade-up" data-aos-delay="${(index % 6) * 100 + 200}">${truncateText(event.description, 100)}</p>
-        <div class="mb-2" data-aos="fade-up" data-aos-delay="${(index % 6) * 100 + 250}">
+        <h5 class="card-title">${event.title}</h5>
+        <p class="card-text text-muted small">${truncateText(event.description, 100)}</p>
+        <div class="mb-2">
           <small class="text-muted">
             <i class="fas fa-calendar me-1"></i>${formattedDate}
           </small>
         </div>
-        <div class="mb-2" data-aos="fade-up" data-aos-delay="${(index % 6) * 100 + 300}">
+        <div class="mb-2">
           <small class="text-muted">
             <i class="fas fa-map-marker-alt me-1"></i>${event.location}
           </small>
         </div>
-        <div class="mt-3" data-aos="fade-up" data-aos-delay="${(index % 6) * 100 + 350}">
-          <strong class="text-primary">${formattedPrice}</strong>
+        <div class="mt-3">
+          <strong class="text-purple">${formattedPrice}</strong>
         </div>
       </div>
       <div class="card-footer bg-white border-0 event-card-footer">
         <a href="detail.html?id=${event.id}" 
-           class="btn btn-outline-primary btn-sm flex-fill"
-           data-aos="zoom-in" 
-           data-aos-delay="${(index % 6) * 100 + 400}">
+           class="btn btn-outline-primary btn-sm flex-fill">
           <i class="fas fa-info-circle me-1"></i>Detail
         </a>
         <button 
           onclick="registerEvent(${event.id}, this)" 
           class="btn ${isRegistered ? 'btn-success' : 'btn-primary'} btn-sm flex-fill"
-          data-aos="zoom-in" 
-          data-aos-delay="${(index % 6) * 100 + 450}"
           ${isRegistered ? 'disabled' : ''}
           id="registerBtn-${event.id}">
           <i class="fas fa-check-circle me-1"></i>${isRegistered ? 'Terdaftar' : 'Daftar'}
@@ -146,17 +121,6 @@ function createEventCard(event, index) {
   return col;
 }
 
-function toggleFavorite(eventId) {
-  if (EventStorage.isFavorite(eventId)) {
-    EventStorage.removeFromFavorites(eventId);
-    showNotification('Dihapus dari favorit', 'info');
-  } else {
-    EventStorage.addToFavorites(eventId);
-    showNotification('Ditambahkan ke favorit!', 'success');
-  }
-  loadEvents();
-}
-
 function registerEvent(eventId, buttonElement) {
   if (EventStorage.isRegistered(eventId)) {
     return;
@@ -164,10 +128,9 @@ function registerEvent(eventId, buttonElement) {
   
   const event = EventStorage.getEventById(eventId);
   
-  // Tambahkan loading state dengan animasi
+  // Tambahkan loading state
   buttonElement.disabled = true;
   buttonElement.innerHTML = '<span class="spinner-border spinner-border-sm me-1"></span>Memproses...';
-  buttonElement.setAttribute('data-aos', 'pulse');
   
   // Simulasi proses pendaftaran
   setTimeout(() => {
@@ -177,20 +140,12 @@ function registerEvent(eventId, buttonElement) {
     buttonElement.classList.remove('btn-primary');
     buttonElement.classList.add('btn-success');
     buttonElement.innerHTML = '<i class="fas fa-check-circle me-1"></i>Terdaftar';
-    buttonElement.removeAttribute('data-aos');
     
     // Tampilkan notifikasi sukses
     showNotification(
       `Berhasil mendaftar untuk event "${event.title}"!`,
       'success'
     );
-    
-    // Refresh AOS untuk update animasi
-    setTimeout(() => {
-      if (typeof AOS !== 'undefined') {
-        AOS.refresh();
-      }
-    }, 100);
   }, 500);
 }
 
@@ -204,10 +159,6 @@ function showNotification(message, type = 'success') {
   // Buat elemen notifikasi
   const notification = document.createElement('div');
   notification.className = `custom-notification ${type}`;
-  
-  // Tambahkan AOS untuk notifikasi
-  notification.setAttribute('data-aos', 'fade-left');
-  notification.setAttribute('data-aos-duration', '500');
   
   // Icon berdasarkan type
   let icon = '';
@@ -230,10 +181,6 @@ function showNotification(message, type = 'success') {
   // Trigger animasi masuk
   setTimeout(() => {
     notification.classList.add('show');
-    // Refresh AOS untuk notifikasi
-    if (typeof AOS !== 'undefined') {
-      AOS.refresh();
-    }
   }, 10);
   
   // Hapus setelah 3 detik
@@ -274,22 +221,3 @@ function debounce(func, wait) {
     timeout = setTimeout(later, wait);
   };
 }
-
-// Refresh AOS ketika filter berubah
-function refreshAnimations() {
-  setTimeout(() => {
-    if (typeof AOS !== 'undefined') {
-      AOS.refresh();
-    }
-  }, 150);
-}
-
-// Panggil refreshAnimations di setiap filter change
-document.addEventListener('DOMContentLoaded', function() {
-  // Refresh AOS setelah semua konten dimuat
-  setTimeout(() => {
-    if (typeof AOS !== 'undefined') {
-      AOS.refresh();
-    }
-  }, 500);
-});
