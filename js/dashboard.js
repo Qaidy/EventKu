@@ -52,7 +52,7 @@ function createMyEventCard(event) {
             </small>
           </div>
           <div class="mt-3">
-            <strong class="text-primary">${formattedPrice}</strong>
+            <strong class="text-dark">${formattedPrice}</strong>
           </div>
         </div>
         <div class="card-footer bg-white border-0">

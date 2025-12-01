@@ -1,153 +1,153 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard User - EventKu</title>
-    <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <!-- AOS CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
-<body style="background: linear-gradient(135deg, #E3F2FD 0%, #F3E5F5 50%, #FFF9E6 100%); background-attachment: fixed;">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg modern-navbar sticky-top" data-aos="fade-down" data-aos-duration="800">
-        <div class="container-fluid">
-            <a class="navbar-brand fw-bold fs-4" href="../index.html">
-                <img src="../img/logo ek.png" class="img-fluid mx-1" style="width: 33px;">EventKu
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item" data-aos="fade-down" data-aos-duration="800" data-aos-delay="100">
-                        <a class="nav-link" href="../index.html">Beranda</a>
-                    </li>
-                    <li class="nav-item" data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">
-                        <a class="nav-link" href="event-list.html">Event</a>
-                    </li>
-                    <li class="nav-item" data-aos="fade-down" data-aos-duration="800" data-aos-delay="300">
-                        <a class="nav-link" href="add-event.html">Buat Event</a>
-                    </li>
-                    <li class="nav-item" data-aos="fade-down" data-aos-duration="800" data-aos-delay="400">
-                        <a class="nav-link active" href="dashboard.html">Dashboard</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Page Header -->
-    <section class="py-5 bg-light text-center">
-        <div class="container">
-            <h1 class="mb-0" data-aos="fade-up" data-aos-duration="800">Dashboard</h1>
-            <p class="text-muted" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">Kelola event Anda di sini</p>
-        </div>
-    </section>
-
-    <!-- Dashboard Content -->
-    <div class="container py-5">
-        <!-- Tab Content -->
-        <div class="tab-content">
-            <!-- My Events Tab -->
-            <div class="tab-pane fade show active" id="myEvents" role="tabpanel">
-                <div id="myEventsContainer" class="row g-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <!-- User's events akan ditampilkan di sini -->
-                </div>
-                <div id="myEventsEmpty" class="alert alert-info text-center" style="display: none;" data-aos="fade-up" data-aos-duration="800">
-                    <i class="fas fa-info-circle me-2"></i>Anda belum membuat event. 
-                    <a href="add-event.html" class="alert-link">Buat event sekarang</a>
+    <!DOCTYPE html>
+    <html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard User - EventKu</title>
+        <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        <!-- AOS CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    </head>
+    <body style="background: linear-gradient(135deg, #E3F2FD 0%, #F3E5F5 50%, #FFF9E6 100%); background-attachment: fixed;">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg modern-navbar sticky-top" data-aos="fade-down" data-aos-duration="800">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold fs-4" href="../index.html">
+                    <img src="../img/logo ek.png" class="img-fluid mx-1" style="width: 33px;">EventKu
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item" data-aos="fade-down" data-aos-duration="800" data-aos-delay="100">
+                            <a class="nav-link" href="../index.html">Beranda</a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">
+                            <a class="nav-link" href="event-list.html">Event</a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-duration="800" data-aos-delay="300">
+                            <a class="nav-link" href="add-event.html">Buat Event</a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-duration="800" data-aos-delay="400">
+                            <a class="nav-link active" href="dashboard.html">Dashboard</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </div>
+        </nav>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <p class="mb-0">&copy; 2025 EventKu. Semua hak dilindungi.</p>
-        </div>
-    </footer>
+        <!-- Page Header -->
+        <section class="py-5 bg-light text-center">
+            <div class="container">
+                <h1 class="mb-0" data-aos="fade-up" data-aos-duration="800">Dashboard</h1>
+                <p class="text-muted" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">Kelola event Anda di sini</p>
+            </div>
+        </section>
 
-    <!-- Modal Edit Event -->
-    <div class="modal fade" id="editEventModal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header" data-aos="fade-down" data-aos-duration="600">
-                    <h5 class="modal-title">Edit Event</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <form id="editEventForm">
-                    <div class="modal-body">
-                        <input type="hidden" id="editEventId">
-                        
-                        <div class="mb-3" data-aos="fade-right" data-aos-duration="600">
-                            <label for="editTitle" class="form-label">Judul</label>
-                            <input type="text" class="form-control" id="editTitle" required>
-                        </div>
-
-                        <div class="mb-3" data-aos="fade-left" data-aos-duration="600" data-aos-delay="100">
-                            <label for="editDescription" class="form-label">Deskripsi</label>
-                            <textarea class="form-control" id="editDescription" rows="3" required></textarea>
-                        </div>
-
-                        <div class="mb-3" data-aos="fade-right" data-aos-duration="600" data-aos-delay="200">
-                            <label for="editDate" class="form-label">Tanggal</label>
-                            <input type="date" class="form-control" id="editDate" required>
-                        </div>
-
-                        <div class="mb-3" data-aos="fade-left" data-aos-duration="600" data-aos-delay="300">
-                            <label for="editLocation" class="form-label">Lokasi</label>
-                            <input type="text" class="form-control" id="editLocation" required>
-                        </div>
-
-                        <div class="mb-3" data-aos="fade-right" data-aos-duration="600" data-aos-delay="400">
-                            <label for="editPrice" class="form-label">Harga</label>
-                            <input type="number" class="form-control" id="editPrice" min="0" required>
-                        </div>
-
-                        <div class="mb-3" data-aos="fade-left" data-aos-duration="600" data-aos-delay="500">
-                            <label for="editCategory" class="form-label">Kategori</label>
-                            <select class="form-select" id="editCategory" required>
-                                <option value="Workshop">Workshop</option>
-                                <option value="Seminar">Seminar</option>
-                                <option value="Konferensi">Konferensi</option>
-                                <option value="Meetup">Meetup</option>
-                                <option value="Festival">Festival</option>
-                            </select>
-                        </div>
+        <!-- Dashboard Content -->
+        <div class="container py-5">
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <!-- My Events Tab -->
+                <div class="tab-pane fade show active" id="myEvents" role="tabpanel">
+                    <div id="myEventsContainer" class="row g-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <!-- User's events akan ditampilkan di sini -->
                     </div>
-                    <div class="modal-footer" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                        <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                    <div id="myEventsEmpty" class="alert alert-info text-center" style="display: none;" data-aos="fade-up" data-aos-duration="800">
+                        <i class="fas fa-info-circle me-2"></i>Anda belum membuat event. 
+                        <a href="add-event.html" class="alert-link">Buat event sekarang</a>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
-    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="../js/storage.js"></script>
-    <script src="../js/dashboard.js"></script>
-    
-    <!-- Initialize AOS -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            AOS.init({
-                duration: 800,
-                easing: 'ease-in-out',
-                once: true,
-                mirror: false
+        <!-- Footer -->
+        <footer class="bg-dark text-white py-4">
+            <div class="container text-center">
+                <p class="mb-0">&copy; 2025 EventKu. Semua hak dilindungi.</p>
+            </div>
+        </footer>
+
+        <!-- Modal Edit Event -->
+        <div class="modal fade" id="editEventModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" data-aos="fade-down" data-aos-duration="600">
+                        <h5 class="modal-title">Edit Event</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <form id="editEventForm">
+                        <div class="modal-body">
+                            <input type="hidden" id="editEventId">
+                            
+                            <div class="mb-3" data-aos="fade-right" data-aos-duration="600">
+                                <label for="editTitle" class="form-label">Judul</label>
+                                <input type="text" class="form-control" id="editTitle" required>
+                            </div>
+
+                            <div class="mb-3" data-aos="fade-left" data-aos-duration="600" data-aos-delay="100">
+                                <label for="editDescription" class="form-label">Deskripsi</label>
+                                <textarea class="form-control" id="editDescription" rows="3" required></textarea>
+                            </div>
+
+                            <div class="mb-3" data-aos="fade-right" data-aos-duration="600" data-aos-delay="200">
+                                <label for="editDate" class="form-label">Tanggal</label>
+                                <input type="date" class="form-control" id="editDate" required>
+                            </div>
+
+                            <div class="mb-3" data-aos="fade-left" data-aos-duration="600" data-aos-delay="300">
+                                <label for="editLocation" class="form-label">Lokasi</label>
+                                <input type="text" class="form-control" id="editLocation" required>
+                            </div>
+
+                            <div class="mb-3" data-aos="fade-right" data-aos-duration="600" data-aos-delay="400">
+                                <label for="editPrice" class="form-label">Harga</label>
+                                <input type="number" class="form-control" id="editPrice" min="0" required>
+                            </div>
+
+                            <div class="mb-3" data-aos="fade-left" data-aos-duration="600" data-aos-delay="500">
+                                <label for="editCategory" class="form-label">Kategori</label>
+                                <select class="form-select" id="editCategory" required>
+                                    <option value="Workshop">Workshop</option>
+                                    <option value="Seminar">Seminar</option>
+                                    <option value="Konferensi">Konferensi</option>
+                                    <option value="Meetup">Meetup</option>
+                                    <option value="Festival">Festival</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="modal-footer" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                            <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        <!-- AOS JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script src="../js/storage.js"></script>
+        <script src="../js/dashboard.js"></script>
+        
+        <!-- Initialize AOS -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                AOS.init({
+                    duration: 800,
+                    easing: 'ease-in-out',
+                    once: true,
+                    mirror: false
+                });
             });
-        });
-    </script>
-</body>
-</html>
+        </script>
+    </body>
+    </html>
