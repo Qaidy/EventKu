@@ -33,7 +33,7 @@ function createEventCard(event) {
   
   return `
     <div class="col-md-6 col-lg-4">
-      <div class="card event-card shadow-sm h-100">
+      <div class="card event-card shadow-sm h-100" data-aos="fade-up" data-aos-delay="100">
         <img src="${event.image}" class="card-img-top" alt="${event.title}" style="height: 200px; object-fit: cover;">
         <div class="card-body event-card-body">
           <span class="badge bg-primary mb-2">${event.category}</span>
